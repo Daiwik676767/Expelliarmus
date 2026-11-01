@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080811">
+  <title>EXPelliARMUS | Ultimate Gaming Hub</title>
+  <meta name="description" content="Discover games, challenge yourself and play free mini-games at Expelliarmus.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="#home" class="logo">EXPELLIARMUS<span>.</span></a>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#games">Games</a>
+    <a href="#play">Play Now</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <a href="#games" class="nav-button">EXPLORE ?</a>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="eyebrow">WELCOME TO THE GAMEVERSE</p>
+    <h1>LEVEL UP<br>YOUR <span>WORLD.</span></h1>
+
+    <p class="hero-description">
+      Discover exciting games, challenge your mind,
+      test your speed and explore your next obsession.
+      Your gaming journey starts here.
+    </p>
+
+    <a href="#games" class="primary-btn">EXPLORE GAMES ?</a>
+
+    <div class="hero-note">
+      <span class="live-dot"></span>
+      YOUR NEXT ADVENTURE AWAITS
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="orb">
+      <span>E</span>
+    </div>
+    <div class="floating-card card-one">? SPEED</div>
+    <div class="floating-card card-two">?? PLAY</div>
+    <div class="floating-card card-three">?? WIN</div>
+  </div>
+</section>
+
+<section class="stats">
+  <div><strong>07</strong><span>MINI GAMES</span></div>
+  <div><strong>FREE</strong><span>TO PLAY</span></div>
+  <div><strong>24/7</strong><span>GAME TIME</span></div>
+</section>
+
+<section class="games-section" id="games">
+
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">FIND YOUR NEXT OBSESSION</p>
+      <h2>EXPLORE <span>GAMES.</span></h2>
+      <p class="section-subtitle">Choose a game. Enter the challenge.</p>
+    </div>
+
+    <input
+      type="search"
+      id="search"
+      placeholder="Search games..."
+      aria-label="Search games"
+    >
+  </div>
+
+  <div class="categories">
+    <button class="category active" data-filter="all">All Games</button>
+    <button class="category" data-filter="arcade">Arcade</button>
+    <button class="category" data-filter="puzzle">Puzzle</button>
+    <button class="category" data-filter="action">Action</button>
+  </div>
+
+  <div class="game-grid" id="gameGrid">
+
+    <article class="game-card" data-category="arcade" data-name="neon clicker">
+      <div class="game-art art-purple">?</div>
+      <div class="game-info">
+        <span class="tag">ARCADE</span>
+        <h3>Neon Clicker</h3>
+        <p>Click as fast as possible in 10 seconds.</p>
+        <button onclick="openGame('clicker')">PLAY NOW ?</button>
+      </div>
+    </article>
+
+    <article class="game-card" data-category="puzzle" data-name="number guess">
+      <div class="game-art art-blue">??</div>
+      <div class="game-info">
+        <span class="tag">PUZZLE</span>
+        <h3>Number Guess</h3>
+        <p>Find the secret number between 1 and 100.</p>
+        <button onclick="openGame('guess')">PLAY NOW ?</button>
+      </div>
+    </article>
+
+    <article class="game-card" data-category="arcade" data-name="rock paper scissors">
+      <div class="game-art art-pink">?</div>
+      <div class="game-info">
+        <span class="tag">ARCADE</span>
+        <h3>Rock Paper Scissors</h3>
+        <p>Challenge the computer to a classic battle.</p>
+        <button onclick="openGame('rps')">PLAY NOW ?</button>
+      </div>
+    </article>
+
+    <article class="game-card" data-category="arcade" data-name="coin flip">
+      <div class="game-art art-orange">??</div>
+      <div class="game-info">
+        <span class="tag">ARCADE</span>
+        <h3>Coin Flip</h3>
+        <p>Heads or tails? Make your prediction.</p>
+        <button onclick="openGame('coin')">PLAY NOW ?</button>
+      </div>
+    </article>
+
+    <article class="game-card" data-category="action" data-name="reaction test">
+      <div class="game-art art-green">?</div>
+      <div class="game-info">
+        <span class="tag">ACTION</span>
+        <h3>Reaction Test</h3>
+        <p>How quickly can you react to the signal?</p>
+        <button onclick="openGame('reaction')">PLAY NOW ?</button>
+      </div>
+    </article>
+
+    <article class="game-card" data-category="puzzle" data-name="memory match">
+      <div class="game-art art-blue">??</div>
+      <div class="game-info">
+        <span class="tag">PUZZLE</span>
+        <h3>Memory Match</h3>
+        <p>Find all matching pairs of symbols.</p>
+        <button onclick="openGame('memory')">PLAY NOW ?</button>
+      </div>
+    </article>
+
+    <article class="game-card" data-category="arcade" data-name="target click">
+      <div class="game-art art-red">??</div>
+      <div class="game-info">
+        <span class="tag">ARCADE</span>
+        <h3>Target Click</h3>
+        <p>Hit the moving target ten times.</p>
+        <button onclick="openGame('target')">PLAY NOW ?</button>
+      </div>
+    </article>
+
+  </div>
+
+  <p id="noResults">No games found. Try another search.</p>
+
+</section>
+
+<section class="play-section" id="play">
+  <p class="eyebrow">READY PLAYER ONE?</p>
+  <h2>YOUR GAME<br>STARTS <span>NOW.</span></h2>
+  <p>Select any game above and start playing.</p>
+
+  <div class="game-area" id="gameArea">
+    <div class="game-placeholder">
+      <span>??</span>
+      <h3>SELECT YOUR GAME</h3>
+      <p>Your next challenge will appear here.</p>
+      <a href="#games" class="primary-btn">BROWSE GAMES</a>
+    </div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <p class="eyebrow">OUR WORLD. YOUR ADVENTURE.</p>
+  <h2>ABOUT <span>EXPELLIARMUS.</span></h2>
+  <p>
+    Expelliarmus is a gaming hub made for curious minds,
+    competitive players and people who simply love games.
+    Discover challenges, play mini-games and enjoy the experience.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <a href="#home" class="logo">EXPELLIARMUS<span>.</span></a>
+  <p>Made for gamers. Built for fun.</p>
+  <p> 2026 Expelliarmus. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
